@@ -61,14 +61,24 @@ int testFactorial(void)
 ```
 
 ## Test methods
-* EXPECT_TRUE(cond) - test whether a condition is true (non-zero)
-* EXPECT_FALSE(cond) - test whether condition is false (zero)
-* EXPECT_EQ(a,b) - test whether two values are equal
-* EXPECT_NEQ(a,b) - test whether two values are not equal
-* EXPECT_GT(a,b) - test whether a is > b
-* EXPECT_GE(a,b) - test whether a is >= b
-* EXPECT_LT(a,b) - test whether a is < b
-* EXPECT_LE(a,b) - test whether a is <= b
-* EXPECT_STREQ(a,b) - test whether two strings are equal per `strcmp()`
-* EXPECT_STRNEQ(a,b) - test whether two strings are not equal per `strcmp()`
-* 
+### Logical comparisons
+Arguments can be an integer type or a pointer type, where a non-`NULL` value is considered to be TRUE:
+* `EXPECT_TRUE(cond)` - test whether a condition is true (non-zero)
+* `EXPECT_FALSE(cond)` - test whether condition is false (zero)
+### Integer comparisions
+Both arguments should be constants or integer types:
+* `EXPECT_EQ(a,b)` - test whether two values are equal
+* `EXPECT_NEQ(a,b)` - test whether two values are not equal
+* `EXPECT_GT(a,b)` - test whether a is > b
+* `EXPECT_GE(a,b)` - test whether a is >= b
+* `EXPECT_LT(a,b)` - test whether a is < b
+* `EXPECT_LE(a,b)` - test whether a is <= b
+### String comparisons
+Arguments can be string literals or `char *` C-style strings.
+* `EXPECT_STREQ(a,b)` - test whether two strings are equal per `strcmp()`. 
+* `EXPECT_STRNEQ(a,b)` - test whether two strings are not equal per `strcmp()`.
+### VERA tests
+* TBD
+
+### Banked RAM tests
+* TBD
