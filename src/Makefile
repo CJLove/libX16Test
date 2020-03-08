@@ -19,10 +19,10 @@ OPT := -Oi
 all: libX16Test.lib
 
 quit.o: quit.s
-	ca65 -t cx16 quit.s
+	ca65 -t cx16
 
-libX16Test.lib: $(OBJ) quit.o
-	ar65 r libX16Test.lib $(OBJ) quit.o
+libX16Test.lib: $(OBJ)
+	ar65 r libX16Test.lib $(OBJ)
 	cp *.lib $(LIBRARIES)
 
 clean:

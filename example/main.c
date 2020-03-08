@@ -7,6 +7,7 @@ extern int testComparisonFailures(void);
 
 int main()
 {
+    printf("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
     registerTestModule(testFactorial,"factorial");
     registerTestModule(testComparisons, "comparisons");
     registerTestModule(testComparisonFailures, "comparisonFailures");

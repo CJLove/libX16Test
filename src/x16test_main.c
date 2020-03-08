@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-extern void __fastcall__ quit(uint8_t status);
-
 struct testModule_t {
     char* moduleName;
     TestModulePtr funcPtr;
@@ -14,6 +12,13 @@ struct testModule_t {
 
 struct testModule_t modules[MAX_MODULES];
 uint16_t moduleIndex = 0;
+
+void quitWithResult(uint8_t result)
+{
+    uint8_t *resultPtr = (uint8_t*) 0x00;
+    *resultPtr = result;
+    asm("jmp $ffff");
+}
 
 void registerTestModule(TestModulePtr funcPtr, char* moduleName)
 {
@@ -46,5 +51,5 @@ int x16testmain(uint8_t noExit)
     if (noExit)
         return (failures != 0);
     else
-        quit (failures != 0);
+        quitWithResult (failures != 0);
 }
