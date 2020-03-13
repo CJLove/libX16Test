@@ -46,7 +46,7 @@ extern void registerTestModule(TestModulePtr funcPtr, char* moduleName);
         tests++;                                                                       \
         if ((a) != (b)) {                                                              \
             failures++;                                                                \
-            printf("failure at l%s ine %d: %u != %u\n", __FILE__, __LINE__, (a), (b)); \
+            printf("failure at %s line %d: %d != %d\n", __FILE__, __LINE__, (a), (b)); \
         }                                                                              \
     }
 
@@ -55,7 +55,7 @@ extern void registerTestModule(TestModulePtr funcPtr, char* moduleName);
         tests++;                                                                       \
         if ((a) == (b)) {                                                              \
             failures++;                                                                \
-            printf("failure at %s line %d: %u == %u\n", __FILE__, __LINE__, (a), (b)); \
+            printf("failure at %s line %d: %d == %d\n", __FILE__, __LINE__, (a), (b)); \
         }                                                                              \
     }
 
@@ -64,7 +64,7 @@ extern void registerTestModule(TestModulePtr funcPtr, char* moduleName);
         tests++;                                                                       \
         if ((a) <= (b)) {                                                              \
             failures++;                                                                \
-            printf("failure at %s line %d: %u <= %u\n", __FILE__, __LINE__, (a), (b)); \
+            printf("failure at %s line %d: %d <= %d\n", __FILE__, __LINE__, (a), (b)); \
         }                                                                              \
     }
 
@@ -73,7 +73,7 @@ extern void registerTestModule(TestModulePtr funcPtr, char* moduleName);
         tests++;                                                                      \
         if ((a) < (b)) {                                                              \
             failures++;                                                               \
-            printf("failure at %s line %d: %u < %u\n", __FILE__, __LINE__, (a), (b)); \
+            printf("failure at %s line %d: %d < %d\n", __FILE__, __LINE__, (a), (b)); \
         }                                                                             \
     }
 
@@ -82,7 +82,7 @@ extern void registerTestModule(TestModulePtr funcPtr, char* moduleName);
         tests++;                                                                       \
         if ((a) >= (b)) {                                                              \
             failures++;                                                                \
-            printf("failure at %s line %d: %u >= %u\n", __FILE__, __LINE__, (a), (b)); \
+            printf("failure at %s line %d: %d >= %d\n", __FILE__, __LINE__, (a), (b)); \
         }                                                                              \
     }
 
@@ -91,7 +91,7 @@ extern void registerTestModule(TestModulePtr funcPtr, char* moduleName);
         tests++;                                                                      \
         if ((a) > (b)) {                                                              \
             failures++;                                                               \
-            printf("failure at %s line %d: %u > %u\n", __FILE__, __LINE__, (a), (b)); \
+            printf("failure at %s line %d: %d > %d\n", __FILE__, __LINE__, (a), (b)); \
         }                                                                             \
     }
 
