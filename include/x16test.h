@@ -20,7 +20,6 @@ extern void registerTestModule(TestModulePtr funcPtr, char* moduleName);
 
 #define TEST_COMPLETE()                                      \
     printf("    tests: %d failures: %d\n", tests, failures); \
-    printf("===============\n");                             \
     return (failures != 0);
 
 #define EXPECT_TRUE(a)                                             \

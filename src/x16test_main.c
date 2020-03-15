@@ -40,6 +40,7 @@ int x16testmain(uint8_t noExit)
         printf("starting module %s\n",modules[idx].moduleName);
         result = modules[idx].funcPtr();
         printf("finished module %s\n",modules[idx].moduleName);
+        printf("===============\n");
         tests++;
         if (result) {
             failures++;
